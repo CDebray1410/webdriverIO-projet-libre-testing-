@@ -32,7 +32,8 @@ Then(/^I should be redirected to page (.*)$/, async (page) => {
 /* HOME PUBLICATION test */
 
 When(/^I send publication on homepage with role (\w+)$/, async (role) => {
-    await BasePage.login(role)
+    await BasePage.login(role);
+    await BasePage.sendPublication();
 });
 
 Then(/^I should see new publication on homepage$/, async () => {

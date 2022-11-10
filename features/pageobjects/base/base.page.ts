@@ -33,7 +33,7 @@ class CheckPage extends Page {
     }
 
     public async login (role: string) {
-        let email = this.usersEmail[role];
+        let email = this.usersEmail[role];  
         await this.inputEmail.setValue(email);
         await this.inputPassword.setValue('yyyyyyyyy');
         await this.btnSubmit.click();
