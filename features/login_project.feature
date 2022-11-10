@@ -4,9 +4,12 @@ Feature: Login page
 
     Given I am on the login page
     When I login with <email> and <password>
-    Then I should see a flash message saying <message>
+    Then I should be redirected to page <redirection>
 
     Examples:
-      | email                        | password  | message                        |
-      | christopherdebray@outlook.fr | yyyyyyyyy | You logged into a secure area! |
-      | admin@outlook.fr             | yyyyyyyyy | Your username is invalid!      |
+      | email                        | password  | redirection     |
+      | christopherdebray@outlook.fr | yyyyyyyyy | homepage        |
+      | teacher@outlook.fr           | yyyyyyyyy | homepageTeacher |
+      | admin@outlook.fr             | yyyyyyyyy | homepageAdmin   |
+      | admin@outlook.fr             | kljqdhfsy | login           |
+      | noaccount@outlook.fr         | yyyyyyyyy | login           |
