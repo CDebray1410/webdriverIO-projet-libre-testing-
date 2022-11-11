@@ -4,9 +4,9 @@ Feature: Home pages
 
     Given I am on the base page
     When I send publication on homepage with role <role>
-    Then I should see new publication on homepage
+    Then I should see an alert with <status>
 
     Examples:
-      | role    |
-      | teacher |
-      | admin   |
+      | role    | status |
+      | teacher | true   |
+      | admin   | true   |

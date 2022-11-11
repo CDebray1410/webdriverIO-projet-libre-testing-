@@ -32,6 +32,25 @@ class CheckPage extends Page {
         return $('#send-publi');
     }
 
+    public get successAlertBox() {
+        return $('#success-alert-box')
+    }
+
+    public get errorAlertBox() {
+        return $('#error-alert-box')
+    }
+
+    public async checkAlertResult(expectedResult: boolean) {
+        console.log("PONEYDOUX")
+        console.log(await this.successAlertBox)
+        console.log(await this.successAlertBox.hasClass('hidden'))
+        if (expectedResult) {
+            return await !this.successAlertBox.hasClass('hidden');
+        }
+
+        return await !this.errorAlertBox.hasClass('hidden');
+    }
+
     public async login (role: string) {
         let email = this.usersEmail[role];  
         await this.inputEmail.setValue(email);
