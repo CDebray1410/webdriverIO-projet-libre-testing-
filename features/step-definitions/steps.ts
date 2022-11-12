@@ -23,6 +23,7 @@ When(/^I login with (\w+\@\w+\.\w+) and (.+)$/, async (email, password) => {
 Then(/^I should be redirected to page (.*)$/, async (page) => {
     let url = await browser.getUrl();
     let urlPathname = url.replace(urlBase,'');
+    //TODO change to toHaveUrl
     await browser.waitUntil(async () => (urlPathname=page), { timeout: 1000 })
     //await browser.pause(5000)
 
@@ -44,8 +45,11 @@ Then(/^I should see an alert with (\w+)$/, async (status) => {
 
     //expect(urlPathname).toEqual(page);
     await browser.pause(1000);
-    let isTestSuccessful = await BasePage.checkAlertResult(status);
-    console.dir("PUBLICATION STATUS :" + isTestSuccessful);
-    await browser.pause(10000);
-    expect(isTestSuccessful).toBeTruthy();
+    // let isTestSuccessful = await BasePage.checkAlertResult(status);
+    
+    // console.dir("PUBLICATION STATUS :" + isTestSuccessful);
+    // await browser.pause(10000);
+
+    const successAlertBox = await $('#success-alert-box')
+    expect(successAlertBox).toHaveElementClassContaining('displayed')
 });

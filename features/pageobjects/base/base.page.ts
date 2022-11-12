@@ -5,7 +5,7 @@ import Page from '../pageProject';
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class CheckPage extends Page {
+class BasePage extends Page {
     private usersEmail = {
         'student': 'christopherdebray@outlook.fr',
         'teacher': 'teacher@outlook.fr',
@@ -41,9 +41,8 @@ class CheckPage extends Page {
     }
 
     public async checkAlertResult(expectedResult: boolean) {
-        console.log("PONEYDOUX")
+        console.log('MLKJMLKJMLKJ')
         console.log(await this.successAlertBox)
-        console.log(await this.successAlertBox.hasClass('hidden'))
         if (expectedResult) {
             return await !this.successAlertBox.hasClass('hidden');
         }
@@ -72,4 +71,4 @@ class CheckPage extends Page {
     }
 }
 
-export default new CheckPage();
+export default new BasePage();

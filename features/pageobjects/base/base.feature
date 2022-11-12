@@ -7,6 +7,6 @@ Feature: Home pages
     Then I should see an alert with <status>
 
     Examples:
-      | role    | status |
-      | teacher | true   |
-      | admin   | true   |
+      | role    |
+      | teacher |
+      | admin   |
