@@ -4,7 +4,7 @@ Feature: Home pages
 
     Given I am on the base page
     When I send publication on homepage with role <role>
-    Then I should see an alert with <status>
+    Then I should see a success alert for publication
 
     Examples:
       | role    |
