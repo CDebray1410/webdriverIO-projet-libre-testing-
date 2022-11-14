@@ -168,7 +168,11 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: [
+            './features/step-definitions/loginTest.ts',
+            './features/step-definitions/homepagePublicationTest.ts',
+            './features/step-definitions/admin/materCreationTest.ts'
+        ],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
