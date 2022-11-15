@@ -11,27 +11,14 @@ class MaterCreationPage extends PageProject {
         return $('input[type=submit]');
     }
 
-    public async createMatter () {
-        const date = new Date();
-        let day = date.getDate();
-        let month = date.getMonth();
-        let year = date.getFullYear();
-        let hour = date.getHours()
-        let minutes = date.getMinutes()
-        let seconds = date.getSeconds();
-
-        let currentDateTest = `materTest ${day}-${month}-${year} ${hour}:${minutes}:${seconds}`;
-        await this.inputName.setValue(currentDateTest);
-        await this.btnSubmit.click();
+    public get materLink () {
+        return $('#Matières')
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    public open () {
-        // TODO must go from login to selected page since need to be connected
-        return super.open('login');
-        return super.open('admin/matter_create');
+    public async createMatter () {
+        let currentDateTest = `materTest ${this.getCurrentDateInFrench()}`;
+        await this.inputName.setValue(currentDateTest);
+        await this.btnSubmit.click();
     }
 }
 

@@ -18,7 +18,7 @@ When(/^I send publication on homepage with role (\w+)$/, async (role) => {
 });
 
 Then(/^I should see a success alert for publication$/, async () => {
-    await browser.pause(1000);
+    await browser.pause(100);
     const successAlertBox = await $('#success-alert-box')
     expect(successAlertBox).toHaveElementClassContaining('displayed')
 });

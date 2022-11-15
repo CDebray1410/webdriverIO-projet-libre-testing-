@@ -22,8 +22,7 @@ Then(/^I should be redirected to page (.*)$/, async (page) => {
     let url = await browser.getUrl();
     let urlPathname = url.replace(urlBase,'');
     //TODO change to toHaveUrl
-    await browser.waitUntil(async () => (urlPathname=page), { timeout: 1000 })
-    //await browser.pause(5000)
+    await browser.waitUntil(async () => (urlPathname=page), { timeout: 100 })
 
     expect(urlPathname).toEqual(page);
 });

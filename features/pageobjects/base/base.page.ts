@@ -52,7 +52,8 @@ class BasePage extends Page {
     }
 
     public async sendPublication () {
-        await this.publicationTextarea.setValue('This is a test publication');
+        let currentDateTest = `publication test ${this.getCurrentDateInFrench()}    `;
+        await this.publicationTextarea.setValue(currentDateTest);
         await this.publicationSendBtn.click();
     }
 
