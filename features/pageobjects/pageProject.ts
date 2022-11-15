@@ -7,7 +7,7 @@ export default class PageProject {
         // ADMIN links
         'mater': 'Matières',
         'level': 'Niveaux',
-        'classes': 'Classes',
+        'classCreation': 'Classes',
         'users': 'Utilisateurs',
         'cafeteria': 'Cafetaria'
         // TEACHER links
