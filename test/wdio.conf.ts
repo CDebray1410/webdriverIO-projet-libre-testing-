@@ -171,7 +171,8 @@ export const config: Options.Testrunner = {
         require: [
             './features/step-definitions/loginTest.ts',
             './features/step-definitions/homepagePublicationTest.ts',
-            './features/step-definitions/admin/materCreationTest.ts'
+            './features/step-definitions/admin/materCreationTest.ts',
+            './features/step-definitions/admin/levelCreationTest.ts'
         ],
         // <boolean> show full backtrace for errors
         backtrace: false,

@@ -1,15 +1,8 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
-
 import BasePage from '../pageobjects/base/base.page';
 
-const pages = {
-    base: BasePage
-}
-
-const urlBase = "http://localhost:1373/";
-
 Given(/^I am on the base page$/, async () => {
-    await pages['base'].open()
+    await BasePage.open()
 });
 
 When(/^I send publication on homepage with role (\w+)$/, async (role) => {

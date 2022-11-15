@@ -1,20 +1,20 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import BasePage from '../../pageobjects/base/base.page';
-import MaterCreationPage from '../../pageobjects/admin/materCreation.page';
+import LevelCreationPage from '../../pageobjects/admin/levelCreation.page';
 
-Given(/^I am on the matterCreation page$/, async () => {
+Given(/^I am on the levelCreation page$/, async () => {
     await BasePage.open()
 });
 
-When(/^I create a matter as admin$/, async () => {
+When(/^I create a level as admin$/, async () => {
     await BasePage.login('admin');
     await browser.pause(100);
-    await MaterCreationPage.goToLink('mater')
+    await LevelCreationPage.goToLink('level')
     await browser.pause(100);
-    await MaterCreationPage.createMatter();
+    await LevelCreationPage.createLevel();
 });
 
-Then(/^I should see a success alert for mater$/, async () => {
+Then(/^I should see a success alert for level$/, async () => {
     await browser.pause(100);
     const successAlertBox = await $('#success-alert-box')
     expect(successAlertBox).toHaveElementClassContaining('displayed')

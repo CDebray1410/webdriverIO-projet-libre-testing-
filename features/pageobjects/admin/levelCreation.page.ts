@@ -2,7 +2,7 @@ import { ChainablePromiseElement } from 'webdriverio';
 
 import PageProject from '../pageProject';
 
-class MaterCreationPage extends PageProject {
+class LevelCreationPage extends PageProject {
     public get inputName () {
         return $('#name');
     }
@@ -11,11 +11,11 @@ class MaterCreationPage extends PageProject {
         return $('input[type=submit]');
     }
 
-    public async createMatter () {
-        let currentDateTest = `materTest ${this.getCurrentDateInFrench()}`;
+    public async createLevel () {
+        let currentDateTest = `levelTest ${this.getCurrentDateInFrench()}`;
         await this.inputName.setValue(currentDateTest);
         await this.btnSubmit.click();
     }
 }
 
-export default new MaterCreationPage();
+export default new LevelCreationPage();

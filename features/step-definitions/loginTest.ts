@@ -1,18 +1,11 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
-
 import LoginPage from '../pageobjects/base/login_project.page';
-
-const pages = {
-    login: LoginPage
-}
 
 const urlBase = "http://localhost:1373/";
 
 Given(/^I am on the login page$/, async () => {
-    await pages['login'].open()
+    await LoginPage.open()
 });
-
-/* LOGIN */
 
 When(/^I login with (\w+\@\w+\.\w+) and (.+)$/, async (email, password) => {
     await LoginPage.login(email, password)
