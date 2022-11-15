@@ -9,8 +9,10 @@ export default class PageProject {
         'level': 'Niveaux',
         'classCreation': 'Classes',
         'users': 'Utilisateurs',
-        'cafeteria': 'Cafetaria'
+        'cafeteria': 'Cafetaria',
         // TEACHER links
+        // STUDENT links
+        'groupix': 'Groupix'
     }
     
     /**
