@@ -175,6 +175,8 @@ export const config: Options.Testrunner = {
             './features/step-definitions/admin/materCreationTest.ts',
             './features/step-definitions/admin/levelCreationTest.ts',
             './features/step-definitions/admin/classCreationTest.ts',
+            './features/step-definitions/admin/teacherCreationTest.ts',
+            './features/step-definitions/admin/studentCreationTest.ts',
 
             './features/step-definitions/student/groupPublicationTest.ts',
         ],

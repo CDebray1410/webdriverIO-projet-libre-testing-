@@ -8,7 +8,7 @@ export default class PageProject {
         'mater': 'Matières',
         'level': 'Niveaux',
         'classCreation': 'Classes',
-        'users': 'Utilisateurs',
+        'userCreation': 'Utilisateurs',
         'cafeteria': 'Cafetaria',
         // TEACHER links
         // STUDENT links
