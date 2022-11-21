@@ -123,7 +123,7 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:1373',
+    baseUrl: 'http://localhost:1373/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -169,16 +169,11 @@ export const config: Options.Testrunner = {
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
         require: [
-            './features/step-definitions/loginTest.ts',
-            './features/step-definitions/homepagePublicationTest.ts',
-            
-            './features/step-definitions/admin/materCreationTest.ts',
             './features/step-definitions/admin/levelCreationTest.ts',
-            './features/step-definitions/admin/classCreationTest.ts',
-            './features/step-definitions/admin/teacherCreationTest.ts',
-            './features/step-definitions/admin/studentCreationTest.ts',
-
-            './features/step-definitions/student/groupPublicationTest.ts',
+            './features/step-definitions/given.ts',
+            './features/step-definitions/then.ts',
+            './features/step-definitions/when.ts',
+            './features/step-definitions/support/*.ts'
         ],
         // <boolean> show full backtrace for errors
         backtrace: false,
