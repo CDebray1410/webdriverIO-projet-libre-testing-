@@ -9,7 +9,7 @@ Feature: Login check
         And I click on the element "#passwordInput"
         And I set <password> to the inputfield "#passwordInput"
         And I press "Enter"
-        And I pause for 100ms
+        And I pause for 200ms
         Then I expect that the url is <redirection>
 
         Examples:

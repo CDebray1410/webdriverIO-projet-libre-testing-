@@ -8,9 +8,9 @@ Feature: Student creation
     And I click on the element "#passwordInput"
     And I set "yyyyyyyyy" to the inputfield "#passwordInput"
     And I press "Enter"
-    And I pause for 100ms
+    And I pause for 200ms
     And I click on the element "#Utilisateurs"
-    And I pause for 100ms
+    And I pause for 200ms
     And I click on the element "#lastnameStudent"
     And I set "studentLNTestETE" to the inputfield "#lastnameStudent"
     And I click on the element "#firstnameStudent"
@@ -19,5 +19,5 @@ Feature: Student creation
     And I set "studentTestETE@outlook.fr" to the inputfield "#emailStudent"
     And I click on the element "#submitStudentCreationFormButton"
     And I select the option with the text "PingouinClass" for element "#classSelected"
-    And I pause for 100ms
+    And I pause for 200ms
     Then I expect that element "#success-alert-box" is displayed

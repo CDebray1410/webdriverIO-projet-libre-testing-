@@ -8,12 +8,12 @@ Feature: Class creation
     And I click on the element "#passwordInput"
     And I set "yyyyyyyyy" to the inputfield "#passwordInput"
     And I press "Enter"
-    And I pause for 100ms
+    And I pause for 200ms
     And I click on the element "#Classes"
-    And I pause for 100ms
+    And I pause for 200ms
     And I click on the element "#name"
     And I set "classTestBoiler" to the inputfield "#name"
     And I select the option with the text "PingouinClass" for element "#classLevel"
     And I press "Enter"
-    And I pause for 100ms
+    And I pause for 200ms
     Then I expect that element "#success-alert-box" is displayed

@@ -8,11 +8,11 @@ Feature: Publication creation
     And I click on the element "#passwordInput"
     And I set <password> to the inputfield "#passwordInput"
     And I press "Enter"
-    And I pause for 100ms
+    And I pause for 200ms
     And I click on the element "#publication-text"
     And I set "publicationTestETE" to the inputfield "#publication-text"
     And I press "Enter"
-    And I pause for 100ms
+    And I pause for 200ms
     Then I expect that element "#success-alert-box" is displayed
 
     Examples:
